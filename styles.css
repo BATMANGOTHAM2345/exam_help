@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg-main: #f6efe6;
+    --bg-soft: #fff9f2;
+    --bg-strong: #f2dfcb;
+    --panel: rgba(255, 250, 244, 0.88);
+    --panel-solid: #fffaf4;
+    --border: rgba(102, 67, 42, 0.14);
+    --text-main: #000000;
+    --text-soft: #000000;
+    --accent: #c7682d;
+    --accent-deep: #9c4414;
+    --accent-soft: #f7d8bf;
+    --success: #2d7b5a;
+    --shadow: 0 18px 45px rgba(96, 63, 36, 0.14);
+}
+
+html, body, [class*="css"] {
+    font-family: "Manrope", sans-serif;
+}
+
+.stApp {
+    background:
+        radial-gradient(circle at top right, rgba(219, 128, 63, 0.18), transparent 22rem),
+        radial-gradient(circle at bottom left, rgba(105, 149, 122, 0.12), transparent 26rem),
+        linear-gradient(180deg, #fbf6f0 0%, var(--bg-main) 100%);
+    color: var(--text-main);
+}
+
+[data-testid="stSidebar"] {
+    background:
+        linear-gradient(180deg, rgba(96, 53, 31, 0.98) 0%, rgba(66, 39, 23, 0.98) 100%);
+    border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+[data-testid="stSidebar"] * {
+    color: #fff6ee;
+}
+
+.sidebar-brand {
+    margin: 0 0 1rem 0;
+    padding: 0.2rem 0 0.85rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.sidebar-brand h1 {
+    margin: 0 !important;
+    color: #ffffff !important;
+    font-size: 1.75rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.01em;
+}
+
+.block-container {
+    padding-top: 0.85rem;
+    padding-bottom: 1rem;
+}
+
+h1 {
+    margin-top: 0 !important;
+    margin-bottom: 0.75rem !important;
+    line-height: 1.1 !important;
+    color: var(--text-main);
+    font-weight: 800 !important;
+}
+
+h2, h3 {
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.45rem !important;
+    color: var(--text-main);
+    font-weight: 750 !important;
+}
+
+p, label, .stMarkdown, .stCaption {
+    color: var(--text-main);
+}
+
+div[data-testid="stForm"] {
+    padding: 0.9rem;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    background: linear-gradient(180deg, rgba(255,255,255,0.72), rgba(255,248,241,0.9));
+    box-shadow: var(--shadow);
+    margin-bottom: 0.7rem;
+}
+
+div[data-testid="stTextArea"],
+div[data-testid="stTextInput"],
+div[data-testid="stRadio"],
+div[data-testid="stSelectbox"],
+div[data-testid="stFileUploader"] {
+    margin-bottom: 0.3rem;
+}
+
+div[data-testid="stTextArea"] textarea,
+div[data-testid="stSelectbox"] div[data-baseweb="select"] > div,
+div[data-testid="stFileUploader"] section {
+    border-radius: 14px !important;
+    border: 1px solid rgba(112, 78, 52, 0.18) !important;
+    background: rgba(255, 252, 247, 0.96) !important;
+}
+
+div[data-testid="stSelectbox"] div[data-baseweb="select"] * {
+    color: #000000 !important;
+    fill: #000000 !important;
+}
+
+div[data-testid="stTextInput"] input {
+    border-radius: 14px !important;
+    border: 1px solid rgba(112, 78, 52, 0.18) !important;
+    background: rgba(255, 252, 247, 0.96) !important;
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+    caret-color: #000000 !important;
+}
+
+div[data-testid="stTextInput"] input::placeholder {
+    color: #000000 !important;
+    opacity: 0.65 !important;
+}
+
+div[data-testid="stTextArea"] textarea {
+    color: var(--text-main) !important;
+    -webkit-text-fill-color: #000000 !important;
+    caret-color: #000000 !important;
+}
+
+div[data-testid="stTextArea"] textarea:focus,
+div[data-testid="stTextInput"] input:focus {
+    border-color: rgba(199, 104, 45, 0.5) !important;
+    box-shadow: 0 0 0 1px rgba(199, 104, 45, 0.18);
+}
+
+.stButton > button,
+div[data-testid="stFormSubmitButton"] button {
+    border: none !important;
+    border-radius: 14px !important;
+    background: linear-gradient(135deg, var(--accent), var(--accent-deep)) !important;
+    color: #fffaf5 !important;
+    font-weight: 700 !important;
+    box-shadow: 0 12px 24px rgba(156, 68, 20, 0.22);
+}
+
+.stButton > button:hover,
+div[data-testid="stFormSubmitButton"] button:hover {
+    background: linear-gradient(135deg, #d47537, #8a3810) !important;
+}
+
+div[data-testid="stRadio"] label[data-baseweb="radio"] {
+    background: rgba(255, 248, 241, 0.88);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0.35rem 0.6rem;
+}
+
+div[data-testid="stRadio"] label[data-baseweb="radio"],
+div[data-testid="stRadio"] label[data-baseweb="radio"] * {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+}
+
+div[data-testid="stTextArea"] label,
+div[data-testid="stTextInput"] label,
+div[data-testid="stSelectbox"] label,
+div[data-testid="stFileUploader"] label,
+div[data-testid="stRadio"] > label {
+    color: #000000 !important;
+    font-weight: 700 !important;
+}
+
+div[data-testid="stInfo"],
+div[data-testid="stSuccess"],
+div[data-testid="stWarning"],
+div[data-testid="stError"] {
+    border-radius: 16px;
+    border: 1px solid var(--border);
+}
+
+div[data-testid="stInfo"] {
+    background: rgba(255, 248, 239, 0.92);
+}
+
+div[data-testid="stSuccess"] {
+    background: rgba(233, 247, 240, 0.95);
+}
+
+div[data-testid="stWarning"] {
+    background: rgba(255, 243, 225, 0.95);
+}
+
+div[data-testid="stMetric"] {
+    background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,247,239,0.9));
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 0.7rem 0.8rem;
+}
+
+div[data-testid="stTextArea"] textarea[disabled] {
+    background: rgba(249, 241, 232, 0.88) !important;
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+    opacity: 1 !important;
+}
+
+div[data-testid="stFileUploader"] button,
+div[data-testid="stFileUploader"] button span {
+    color: #fffaf5 !important;
+}
